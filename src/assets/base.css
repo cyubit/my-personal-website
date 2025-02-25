@@ -1,21 +1,13 @@
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
-  --vt-c-white: #ffffff;
-  --vt-c-white-soft: #f8f8f8;
-  --vt-c-white-mute: #f2f2f2;
+  --coolors-bone: #d4d0c4;
+  --coolors-sage: #a3b18a;
+  --coolors-fern: #588157;
+  --coolors-hunter: #3a5a40;
+  --coolors-brunswick: #344e41;
+  --coolors-eerie-black: #1a231f;
 
-  --vt-c-black: #181818;
-  --vt-c-black-soft: #222222;
-  --vt-c-black-mute: #282828;
-
-  --vt-c-indigo: #2c3e50;
-
-  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
-  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
-  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
-  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
-
-  --vt-c-text-light-1: var(--vt-c-indigo);
+  --vt-c-text-light-1: var(--vt-c-) indigo;
   --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
   --vt-c-text-dark-1: var(--vt-c-white);
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
@@ -23,20 +15,29 @@
 
 /* semantic color variables for this project */
 :root {
-  --color-background: var(--vt-c-white);
-  --color-background-soft: var(--vt-c-white-soft);
-  --color-background-mute: var(--vt-c-white-mute);
+  --color-background: var(--coolors-bone);
+  --color-background-hover: var(--coolors-sage);
+
+  --text-primary: var(--coolors-eerie-black);
+  --text-secondary: var(--coolors-eerie-black);
+  --text-selected: var(--coolors-hunter);
+
+  --filter-brunswick: invert(24%) sepia(13%) saturate(1116%) hue-rotate(97deg) brightness(91%)
+    contrast(81%);
+
+  --filter-bone: invert(94%) sepia(16%) saturate(136%) hue-rotate(3deg) brightness(86%)
+    contrast(93%);
 
   --color-border: var(--vt-c-divider-light-2);
   --color-border-hover: var(--vt-c-divider-light-1);
 
   --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
 
+  --border-radius-soft: 0.2em;
   --section-gap: 160px;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --color-background: var(--vt-c-black);
     --color-background-soft: var(--vt-c-black-soft);
@@ -48,7 +49,7 @@
     --color-heading: var(--vt-c-text-dark-1);
     --color-text: var(--vt-c-text-dark-2);
   }
-}
+} */
 
 *,
 *::before,
@@ -67,6 +68,7 @@ body {
     background-color 0.5s;
   line-height: 1.6;
   font-family:
+    'Helvetica Neue',
     Inter,
     -apple-system,
     BlinkMacSystemFont,
@@ -77,7 +79,6 @@ body {
     Cantarell,
     'Fira Sans',
     'Droid Sans',
-    'Helvetica Neue',
     sans-serif;
   font-size: 15px;
   text-rendering: optimizeLegibility;

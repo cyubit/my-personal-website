@@ -5,7 +5,7 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <img alt="Website Logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
       <HelloWorld msg="Ali Habash" />
@@ -30,6 +30,8 @@ header {
 .logo {
   display: block;
   margin: 0 auto 2rem;
+  /* Recolors the logo by filtering over it. https://codepen.io/sosuke/pen/Pjoqqp */
+  filter: var(--filter-brunswick);
 }
 
 nav {
@@ -40,7 +42,7 @@ nav {
 }
 
 nav a.router-link-exact-active {
-  color: var(--color-text);
+  color: var(--text-selected);
 }
 
 nav a.router-link-exact-active:hover {
@@ -48,6 +50,7 @@ nav a.router-link-exact-active:hover {
 }
 
 nav a {
+  color: var(--text-secondary);
   display: inline-block;
   padding: 0 1rem;
   border-left: 1px solid var(--color-border);
@@ -66,6 +69,7 @@ nav a:first-of-type {
 
   .logo {
     margin: 0 2rem 0 0;
+    color: purple;
   }
 
   header .wrapper {
