@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <h1 class="home-text">Hi, I'm Ali.</h1>
+  <h1 class="home-text">Hi, I'm Ali</h1>
 </template>
 
 <style>
