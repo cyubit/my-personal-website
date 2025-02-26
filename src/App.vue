@@ -18,13 +18,24 @@ import HelloWorld from './components/HelloWorld.vue'
     </div>
   </header>
 
-  <RouterView />
+  <div>
+    <RouterView />
+  </div>
+
+  <footer>Uicons by <a href="https://www.flaticon.com/uicons">Flaticon</a></footer>
 </template>
 
 <style scoped>
 header {
   line-height: 1.5;
   max-height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
 }
 
 .logo {
@@ -36,7 +47,7 @@ header {
 
 nav {
   width: 100%;
-  font-size: 12px;
+  font-size: 1.4rem;
   text-align: center;
   margin-top: 2rem;
 }
@@ -69,7 +80,6 @@ nav a:first-of-type {
 
   .logo {
     margin: 0 2rem 0 0;
-    color: purple;
   }
 
   header .wrapper {
